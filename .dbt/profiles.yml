@@ -1,13 +1,13 @@
 my_dbt_project:
   outputs:
     dev:
-      account: DOSCMNN-CH37824
-      role: ACCOUNTADMIN
+      account: replace_this_account_identifier
+      role: replace_this_snowflake_role
       user: "{{ env_var('SNOWFLAKE_USER') }}"
       password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
       type: snowflake
-      warehouse: compute_wh
-      database: SNOWFLAKE_SAMPLE_DATA
-      schema: TPCDS_SF100TCL
+      warehouse: replace_this_warehouse_name
+      database: replace_this_database_name
+      schema: replace_this_schema_name
       threads: 1
   target: dev
