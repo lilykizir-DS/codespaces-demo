@@ -1,10 +1,7 @@
 [default]
-account = "your_org-your_account"
+account = {{ env_var('SNOWFLAKE_ACCOUNT') }}
 user = {{ env_var('SNOWFLAKE_PASSWORD') }}
 password = {{ env_var('SNOWFLAKE_PASSWORD') }}
-warehouse = "your_wh"
-database = "your_db"
-schema = "your_schema"
-
-# Do NOT include a password line here! 
-# Snowflake will seamlessly pull it from the Codespace environment.
+warehouse = "WORKSHOP_WH"
+database = "WORKSHOP_DB"
+schema = "RAW"

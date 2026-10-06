@@ -1,13 +1,13 @@
 my_dbt_project:
   outputs:
     dev:
-      account: "replace_this_account_identifier"
-      role: "replace_this_snowflake_role"
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      role: "ACCOUNTADMIN"
       user: "{{ env_var('SNOWFLAKE_USER') }}"
       password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
       type: snowflake
-      warehouse: "replace_this_warehouse_name"
-      database: "replace_this_database_name"
-      schema: "replace_this_schema_name"
+      warehouse: "WORKSHOP_WH"
+      database: "WORKSHOP_DB"
+      schema: "RAW"
       threads: 1
   target: dev
