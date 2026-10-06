@@ -11,7 +11,10 @@
 				"innoverio.vscode-dbt-power-user",
 				"ms-python.python",
 				"redhat.vscode-yaml"
-			]
+			],
+			"settings": {
+				"snowflake.snowsqlConfigPath": "${containerWorkspaceFolder}/.snowflake/connections.toml"
+			}
 		}
 	},
 
